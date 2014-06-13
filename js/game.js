@@ -1,4 +1,4 @@
-var Game = Class.extend({
+var game = {
 
 	angle: 0,
 	box: null,
@@ -56,10 +56,29 @@ var Game = Class.extend({
 
 		// Set an update function on the app's update event
 		//var angle = 0;
-		app.on('update', this.update);
+		app.on('update', function (delta) {
+			//game.update();
+
+			//console.log(this.angle);
+			this.angle += delta;
+			if (this.angle > 360) {
+				this.angle = 0;
+			}
+
+			// Move the light in a circle
+			//light.setLocalPosition(3 * Math.sin(this.angle), 0, 3 * Math.cos(this.angle));
+
+			// Rotate the box
+			if (this.box) {
+				this.box.setEulerAngles(this.angle*2, this.angle*4, this.angle*8);
+				//console.log(this.box);
+			}
+
+		});
 	},
 
 	update: function (delta) {
+		console.log(this.angle);
 		this.angle += delta;
 		if (this.angle > 360) {
 			this.angle = 0;
@@ -69,7 +88,14 @@ var Game = Class.extend({
 		//light.setLocalPosition(3 * Math.sin(this.angle), 0, 3 * Math.cos(this.angle));
 
 		// Rotate the box
-		if (this.box)
-		this.box.setEulerAngles(this.angle*2, this.angle*4, this.angle*8);
+		if (this.box) {
+			this.box.setEulerAngles(this.angle*2, this.angle*4, this.angle*8);
+			//console.log(this.box);
+		}
 	}
-});
+};
+
+window.onload = function () {
+	//game = new Game();
+	game.init();
+}
