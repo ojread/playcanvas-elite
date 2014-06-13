@@ -78,7 +78,7 @@ var game = {
 	},
 
 	update: function (delta) {
-		console.log(this.angle);
+		//console.log(this.angle);
 		this.angle += delta;
 		if (this.angle > 360) {
 			this.angle = 0;
