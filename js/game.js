@@ -59,18 +59,18 @@ var game = {
 		app.on('update', function (delta) {
 			//game.update();
 
-			//console.log(this.angle);
-			this.angle += delta;
-			if (this.angle > 360) {
-				this.angle = 0;
+			//console.log(game.angle);
+			game.angle += delta;
+			if (game.angle > 360) {
+				game.angle = 0;
 			}
 
 			// Move the light in a circle
 			//light.setLocalPosition(3 * Math.sin(this.angle), 0, 3 * Math.cos(this.angle));
 
 			// Rotate the box
-			if (this.box) {
-				this.box.setEulerAngles(this.angle*2, this.angle*4, this.angle*8);
+			if (game.box) {
+				game.box.setEulerAngles(game.angle*2, game.angle*4, game.angle*8);
 				//console.log(this.box);
 			}
 
@@ -78,7 +78,7 @@ var game = {
 	},
 
 	update: function (delta) {
-		//console.log(this.angle);
+		console.log(this);
 		this.angle += delta;
 		if (this.angle > 360) {
 			this.angle = 0;
