@@ -27,7 +27,23 @@ function init() {
 		rotation: new pc.Quat(1, 1, 1, 1)
 	});*/
 
-	console.log(box);
+	//var componentSystem = pc.fw.ScriptComponentSystem(app.context);
+	//var testScriptComp = pc.fw.ScriptComponent(
+
+	//);	
+
+	app.context.systems.script.addComponent(box, {
+		scripts: [
+			{
+				url: 'js/testScript.js',
+				name: 'testScript'
+			}
+		]
+	});
+
+	console.log('test', app.context.systems.script);
+
+	//console.log('box', box);
 
 	// Create an Entity with a point light component and a sphere model component.
 	var light = new pc.fw.Entity();
