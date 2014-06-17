@@ -12,7 +12,7 @@ pc.script.create('player', function (context) {
 		turnSpeed: 50,
 
 		initialize: function () {
-			console.log(this.entity);
+			//console.log(this.entity);
 		},
 
 		update: function (dt) {
