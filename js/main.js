@@ -45,7 +45,7 @@ app.context.systems.script.addComponent(box, {
 var light = new pc.fw.Entity();
 app.context.systems.light.addComponent(light, {
 	type: 'point',
-	color: new pc.Color(1, 0, 0),
+	color: new pc.Color(1, 1, 1),
 	radius: 10
 });
 app.context.systems.model.addComponent(light, {
