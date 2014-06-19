@@ -26,3 +26,10 @@ https://github.com/josephg/noisejs
 
 This is a noise-generating shader for WebGL. Probably faster but more complex.
 https://github.com/ashima/webgl-noise
+
+
+
+
+
+http://blog.playcanvas.com/a-multiplayer-3rd-person-shooter-in-html5/
+Source for a simple multiplayer game.
