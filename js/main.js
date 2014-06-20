@@ -1,3 +1,6 @@
+var vs = document.getElementById('vertexShader');
+console.log('vs', vs);
+
 var canvas = document.getElementById('canvas');
 
 // Create the input controller.
